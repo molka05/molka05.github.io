@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Molka Werteni ✿ Portfolio</title>
+<meta name="description" content="Portfolio de Molka Werteni, étudiante en Technologies de l'Information : web, IoT, systèmes embarqués et Python.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fff5f9; --pink:#ffb3d1; --pink-d:#ff6fa8; --pink-l:#ffe0ee;
+  --lav:#d9c8ff; --lav-d:#9b7bea; --lav-l:#f0e9ff;
+  --mint:#bff0dc; --mint-d:#3fbf94; --mint-l:#e4faf1;
+  --sun:#ffe9a8; --sun-d:#f2b928; --sky:#c7e5ff; --sky-d:#4fa3e8;
+  --ink:#4a3552; --soft:#8c7595; --white:#fff;
+  --head:"Fredoka","Baloo 2","Comic Sans MS",system-ui,sans-serif;
+  --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:var(--body);color:var(--ink);font-size:16px;line-height:1.65;background:var(--bg);
+  background-image:radial-gradient(var(--pink-l) 2.5px,transparent 2.5px),radial-gradient(var(--lav-l) 2.5px,transparent 2.5px);
+  background-size:36px 36px;background-position:0 0,18px 18px;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--head);font-weight:600}
+.wrap{max-width:1100px;margin:0 auto;padding:0 28px}
+
+/* floating decor */
+.fl{position:fixed;z-index:0;pointer-events:none;opacity:.7;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-14px) rotate(8deg)}}
+.f1{top:14%;left:3%;font-size:34px}.f2{top:30%;right:3%;font-size:28px;animation-delay:1s}
+.f3{top:62%;left:2%;font-size:26px;animation-delay:2s}.f4{top:78%;right:4%;font-size:36px;animation-delay:.5s}
+.f5{top:46%;left:5%;font-size:22px;animation-delay:3s}
+main,nav,footer{position:relative;z-index:1}
+
+/* nav */
+nav{position:sticky;top:16px;z-index:20;display:flex;justify-content:center;margin-top:16px}
+nav ul{list-style:none;display:flex;gap:6px;background:var(--white);border:3px solid var(--ink);border-radius:999px;padding:7px 10px;box-shadow:4px 4px 0 var(--pink)}
+nav a{display:block;padding:6px 18px;border-radius:999px;font-family:var(--head);font-weight:500;font-size:15px;transition:.2s}
+nav a:hover{background:var(--pink-l);transform:translateY(-2px)}
+
+/* hero */
+.hero{padding:70px 0 50px}
+.hero .wrap{display:grid;grid-template-columns:330px 1fr;gap:56px;align-items:center}
+.photo{position:relative;width:310px;height:310px;margin:auto}
+.photo .blob{position:absolute;inset:0;background:linear-gradient(135deg,var(--pink),var(--lav));border:4px solid var(--ink);
+  border-radius:58% 42% 55% 45%/50% 55% 45% 50%;box-shadow:8px 8px 0 var(--sun);animation:morph 9s ease-in-out infinite;display:grid;place-items:center;overflow:hidden}
+@keyframes morph{50%{border-radius:42% 58% 45% 55%/55% 45% 55% 45%}}
+.photo .blob b{font-family:var(--head);font-size:96px;color:#fff;text-shadow:4px 4px 0 var(--ink);letter-spacing:-2px}
+.photo .blob img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo .st{position:absolute;font-size:34px;animation:float 5s ease-in-out infinite}
+.photo .s1{top:-14px;right:10px}.photo .s2{bottom:6px;left:-14px;animation-delay:1.5s}.photo .s3{bottom:-10px;right:30px;font-size:26px;animation-delay:2.5s}
+.bubble{display:inline-block;background:var(--white);border:3px solid var(--ink);border-radius:22px;padding:6px 20px;font-family:var(--head);font-size:18px;position:relative;box-shadow:4px 4px 0 var(--mint);margin-bottom:18px}
+.bubble::after{content:"";position:absolute;left:28px;bottom:-14px;width:18px;height:18px;background:var(--white);border-right:3px solid var(--ink);border-bottom:3px solid var(--ink);transform:rotate(45deg) skew(10deg,10deg)}
+h1{font-size:68px;line-height:1.02;letter-spacing:-1px}
+h1 span{color:var(--pink-d);display:inline-block;background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.role{margin:16px 0 6px;font-family:var(--head);font-size:22px;color:var(--lav-d)}
+.lead{color:var(--soft);font-size:18px;max-width:560px}
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 28px}
+.badge{border:3px solid var(--ink);border-radius:999px;padding:4px 16px;font-family:var(--head);font-size:14px;font-weight:500}
+.b1{background:var(--pink-l)}.b2{background:var(--mint-l)}.b3{background:var(--lav-l)}.b4{background:var(--sun)}
+.btns{display:flex;gap:14px}
+.btn{display:inline-block;border:3px solid var(--ink);border-radius:999px;padding:12px 28px;font-family:var(--head);font-weight:600;font-size:17px;transition:.15s}
+.btn.p{background:var(--pink);box-shadow:5px 5px 0 var(--ink)}
+.btn.s{background:var(--white);box-shadow:5px 5px 0 var(--lav)}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+
+/* sections */
+section{padding:46px 0}
+.title{display:flex;justify-content:center;margin-bottom:34px}
+.title h2{display:inline-flex;gap:12px;align-items:center;font-size:32px;background:var(--white);border:3px solid var(--ink);border-radius:999px;padding:6px 32px;box-shadow:5px 5px 0 var(--c,var(--pink));transform:rotate(-1.5deg)}
+.card{background:var(--white);border:3px solid var(--ink);border-radius:26px;padding:28px 32px;box-shadow:7px 7px 0 var(--c,var(--pink))}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 290px;gap:28px;align-items:stretch}
+.about p{font-size:18px}
+.facts{list-style:none;display:grid;gap:12px;font-size:15px}
+.facts li{display:flex;gap:12px;align-items:center;background:var(--bg);border-radius:16px;padding:10px 14px;border:2px dashed var(--pink)}
+.facts em{font-style:normal;font-size:22px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.sk{border:3px solid var(--ink);border-radius:24px;padding:20px 22px;background:var(--bgc);box-shadow:6px 6px 0 var(--c);transition:.2s}
+.sk:hover{transform:translateY(-6px) rotate(-1deg)}
+.sk h3{font-size:19px;margin-bottom:12px}
+.sk div{display:flex;flex-wrap:wrap;gap:8px}
+.sk span{background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:2px 14px;font-weight:700;font-size:14px}
+
+/* projects */
+.pr{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:0 10px}
+.note{position:relative;border:3px solid var(--ink);border-radius:24px;padding:34px 28px 26px;background:var(--bgc);box-shadow:7px 7px 0 var(--c);transition:.25s}
+.note:nth-child(1){transform:rotate(-1.8deg)}.note:nth-child(2){transform:rotate(1.8deg)}
+.note:hover{transform:rotate(0) translateY(-6px)}
+.note::before{content:"";position:absolute;top:-16px;left:50%;width:90px;height:28px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,255,255,.75);border:2px dashed var(--ink);border-radius:6px}
+.note .ic{font-size:42px;margin-bottom:6px}
+.note h3{font-size:23px;margin-bottom:8px}
+.note p{margin-bottom:16px}
+.note .tg span{display:inline-block;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:0 12px;font-size:13px;font-weight:700;margin:0 6px 6px 0}
+
+/* experience path */
+.path{position:relative;display:grid;gap:30px;padding-left:64px}
+.path::before{content:"";position:absolute;left:23px;top:16px;bottom:16px;border-left:4px dotted var(--pink-d)}
+.job{position:relative}
+.job .dot{position:absolute;left:-64px;top:14px;width:48px;height:48px;border-radius:50%;background:var(--white);border:3px solid var(--ink);display:grid;place-items:center;font-size:22px;box-shadow:3px 3px 0 var(--c)}
+.job .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.job h3{font-size:24px}
+.job .sub{color:var(--lav-d);font-family:var(--head);font-size:17px}
+.date{background:var(--sun);border:2px solid var(--ink);border-radius:999px;padding:2px 16px;font-family:var(--head);font-size:14px}
+.job p{margin:12px 0 14px;color:#6a5672}
+.job .tg span{display:inline-block;border:2px solid var(--ink);background:var(--bgc);border-radius:999px;padding:0 13px;font-size:13px;font-weight:700;margin:0 6px 6px 0}
+
+/* edu / certs / langs */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.cols h3{font-size:22px;margin-bottom:16px}
+.ed{padding:12px 0;border-bottom:2px dashed var(--pink)}
+.ed:last-child{border:0;padding-bottom:0}.ed:first-of-type{padding-top:0}
+.ed small{display:block;color:var(--soft);font-size:14px}
+.ed b{font-family:var(--head);font-weight:600;font-size:17px}
+.ed .d{display:inline-block;background:var(--mint);border:2px solid var(--ink);border-radius:999px;padding:0 12px;font-size:12px;font-weight:700;margin-bottom:4px}
+.cert{display:flex;gap:12px;align-items:flex-start;padding:10px 0}
+.cert i{font-style:normal;font-size:24px}
+.cert small{display:block;color:var(--soft);font-size:14px}
+.cert b{font-family:var(--head);font-weight:600}
+.langs{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.lg{background:var(--bgc);border:3px solid var(--ink);border-radius:22px;padding:18px 10px}
+.lg h4{font-size:20px}
+.lg .h{font-size:20px;letter-spacing:3px;margin:6px 0;filter:saturate(1.1)}
+.lg small{color:var(--soft);font-weight:700}
+
+/* contact */
+.contact{text-align:center;background:linear-gradient(135deg,var(--pink-l),var(--lav-l))}
+.contact h2{font-size:38px;margin-bottom:6px}
+.contact p{color:var(--soft);margin-bottom:24px;font-size:18px}
+.contact .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.contact .row>*{background:var(--white);border:3px solid var(--ink);border-radius:999px;padding:10px 24px;font-family:var(--head);font-weight:500;box-shadow:4px 4px 0 var(--ink)}
+.contact a.x:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+footer{text-align:center;padding:30px 0 50px;font-family:var(--head);color:var(--soft)}
+
+@media(max-width:980px){
+  .hero .wrap,.about,.cols{grid-template-columns:1fr}.skills,.pr{grid-template-columns:1fr 1fr}.langs{grid-template-columns:1fr 1fr}
+  h1{font-size:52px}
+}
+@media(max-width:640px){nav ul{overflow-x:auto;max-width:94vw}.skills,.pr{grid-template-columns:1fr}.fl{display:none}.path{padding-left:54px}.job .dot{left:-54px;width:40px;height:40px}}
+</style>
+</head>
+<body>
+
+<span class="fl f1">✨</span><span class="fl f2">🌸</span><span class="fl f3">💖</span><span class="fl f4">⭐</span><span class="fl f5">🦋</span>
+
+<nav>
+  <ul>
+    <li><a href="#top">🏠 Accueil</a></li>
+    <li><a href="#about">🌷 À propos</a></li>
+    <li><a href="#skills">💻 Skills</a></li>
+    <li><a href="#projects">🎀 Projets</a></li>
+    <li><a href="#experience">🌟 Expérience</a></li>
+    <li><a href="#contact">💌 Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="photo">
+      <div class="blob">
+        <b>MW</b>
+        <!-- Pour ajouter ta photo : <img src="photo.jpg" alt="Molka Werteni"> ici -->
+      </div>
+      <span class="st s1">✨</span><span class="st s2">💖</span><span class="st s3">🌸</span>
+    </div>
+    <div>
+      <div class="bubble">Coucou ! 👋</div>
+      <h1>Je suis <span>Molka</span><br>Werteni</h1>
+      <p class="role">✿ Étudiante en Technologies de l'Information ✿</p>
+      <p class="lead">Web, IoT, réseaux &amp; sécurité informatique : j'adore créer des choses qui marchent… et qui sont jolies&nbsp;!</p>
+      <div class="badges">
+        <span class="badge b1">🌐 Web</span><span class="badge b2">🤖 IoT</span><span class="badge b3">🐍 Python</span><span class="badge b4">🔌 Embarqué</span>
+      </div>
+      <div class="btns">
+        <a class="btn p" href="#projects">Voir mes projets 🎀</a>
+        <a class="btn s" href="#contact">Me contacter 💌</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <div class="title"><h2 style="--c:var(--mint)">🌷 À propos de moi</h2></div>
+    <div class="about">
+      <div class="card" style="--c:var(--pink)">
+        <p>Actuellement étudiante en Technologies de l'Information, je développe des compétences en développement web, administration des réseaux et sécurité informatique. Rigoureuse, autonome et déterminée, je recherche des opportunités me permettant d'acquérir une expérience professionnelle, de renforcer mes compétences techniques et de contribuer à des projets innovants.</p>
+      </div>
+      <div class="card" style="--c:var(--lav);padding:22px">
+        <ul class="facts">
+          <li><em>🎓</em>ISET de Radès</li>
+          <li><em>📘</em>Spécialité SEM</li>
+          <li><em>📍</em>Mégrine, Ben Arous</li>
+          <li><em>🌍</em>4 langues parlées</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="title"><h2 style="--c:var(--lav)">💻 Mes compétences</h2></div>
+    <div class="skills">
+      <div class="sk" style="--bgc:var(--pink-l);--c:var(--pink)"><h3>🐍 Langages</h3><div><span>C</span><span>C++</span><span>Java</span><span>Python</span></div></div>
+      <div class="sk" style="--bgc:var(--sky);--c:var(--sky-d)"><h3>🌐 Développement Web</h3><div><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div></div>
+      <div class="sk" style="--bgc:var(--sun);--c:var(--sun-d)"><h3>🗄️ Bases de données</h3><div><span>MySQL</span><span>Firebase</span></div></div>
+      <div class="sk" style="--bgc:var(--mint-l);--c:var(--mint-d)"><h3>🤖 Systèmes embarqués</h3><div><span>Arduino</span><span>ESP32</span></div></div>
+      <div class="sk" style="--bgc:var(--lav-l);--c:var(--lav-d)"><h3>🐧 Système</h3><div><span>Linux</span></div></div>
+      <div class="sk" style="--bgc:var(--pink-l);--c:var(--pink-d)"><h3>🛠️ Outils</h3><div><span>VS Code</span><span>Android Studio</span><span>Arduino IDE</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="title"><h2 style="--c:var(--sun)">🎀 Mes projets</h2></div>
+    <div class="pr">
+      <article class="note" style="--bgc:var(--mint-l);--c:var(--mint-d)">
+        <div class="ic">📱</div>
+        <h3>QR Flash Validator</h3>
+        <p>Automatisation de la validation des cartes électroniques via lecture de codes QR et traitement des données avec Python.</p>
+        <div class="tg"><span>🐍 Python</span><span>QR code</span><span>Automatisation</span></div>
+      </article>
+      <article class="note" style="--bgc:var(--lav-l);--c:var(--lav-d)">
+        <div class="ic">📈</div>
+        <h3>Curve Analysis Automation</h3>
+        <p>Développement d'un outil Python pour le calcul automatique et l'enregistrement de données destinées à l'analyse de courbes.</p>
+        <div class="tg"><span>🐍 Python</span><span>Analyse de données</span><span>Automatisation</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="title"><h2 style="--c:var(--pink)">🌟 Mon parcours</h2></div>
+    <div class="path">
+
+      <article class="job card" style="--c:var(--mint);--bgc:var(--mint-l)">
+        <div class="dot" style="--c:var(--mint)">🤖</div>
+        <div class="top"><div><h3>Sagemcom IoT</h3><div class="sub">Stage de perfectionnement</div></div><span class="date">Jan 2026</span></div>
+        <p>Réalisation de deux projets dans le domaine de l'Internet des Objets (IoT). Cette expérience m'a permis de renforcer mes compétences techniques et de découvrir un environnement industriel professionnel.</p>
+        <div class="tg"><span>Développement IoT</span><span>Travail en équipe</span><span>Analyse et résolution de problèmes</span></div>
+      </article>
+
+      <article class="job card" style="--c:var(--lav);--bgc:var(--lav-l)">
+        <div class="dot" style="--c:var(--lav)">🌐</div>
+        <div class="top"><div><h3>Horcheni Groupe</h3><div class="sub">Stage de développement web</div></div><span class="date">Juin – Août 2025</span></div>
+        <p>Création d'un site web de présentation pour une nouvelle collection de produits. Cette expérience m'a permis de renforcer mes compétences en développement web et en conception de sites vitrines.</p>
+        <div class="tg"><span>Développement web</span><span>Création de site vitrine</span><span>Travail en équipe</span><span>Intégration de contenu et design</span></div>
+      </article>
+
+      <article class="job card" style="--c:var(--pink);--bgc:var(--pink-l)">
+        <div class="dot" style="--c:var(--pink)">📮</div>
+        <div class="top"><div><h3>La Poste Tunisienne</h3><div class="sub">Stage d'initiation</div></div><span class="date">Jan – Fév 2025</span></div>
+        <p>Découverte du fonctionnement d'un service public et du contact avec les clients. Cette expérience m'a permis de développer mon sens de la responsabilité et de la communication.</p>
+        <div class="tg"><span>Communication</span><span>Organisation</span><span>Travail en équipe</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="title"><h2 style="--c:var(--mint)">🎓 Études &amp; certifs</h2></div>
+    <div class="cols">
+      <div class="card" style="--c:var(--sky)">
+        <h3>📚 Formation</h3>
+        <div class="ed"><span class="d">Sept 2024 – Présent</span><br><b>Licence en technologies de l'informatique</b><small>Institut Supérieur des Études Technologiques de Radès (ISET de Radès)</small><small>Spécialisation : Systèmes Embarqués et Mobile (SEM)</small></div>
+        <div class="ed"><span class="d">Sept 2023 – Juin 2024</span><br><b>Baccalauréat en Sciences Informatiques</b><small>Lycée Taha Hussein Mégrine</small><small>Mention : Assez Bien</small></div>
+      </div>
+      <div class="card" style="--c:var(--sun)">
+        <h3>🏅 Certifications</h3>
+        <div class="cert"><i>⭐</i><span><b>Introduction to Big Data</b><small>UPES</small></span></div>
+        <div class="cert"><i>⭐</i><span><b>Introduction to Web Development</b><small>UPES</small></span></div>
+        <div class="cert"><i>⭐</i><span><b>Google Cloud Skills Boost</b><small>Cloud Computing Foundation 7</small></span></div>
+        <div class="cert"><i>⭐</i><span><b>Introduction to Python</b><small>Association du Club Informatique de la Sûreté Nationale</small></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="title"><h2 style="--c:var(--lav)">🌍 Langues</h2></div>
+    <div class="langs">
+      <div class="lg" style="--bgc:var(--pink-l)"><h4>Arabe</h4><div class="h">💖💖💖💖</div><small>Langue maternelle</small></div>
+      <div class="lg" style="--bgc:var(--lav-l)"><h4>Anglais</h4><div class="h">💖💖💖🤍</div><small>Avancé</small></div>
+      <div class="lg" style="--bgc:var(--mint-l)"><h4>Français</h4><div class="h">💖💖🤍🤍</div><small>Intermédiaire</small></div>
+      <div class="lg" style="--bgc:var(--sun)"><h4>Allemand</h4><div class="h">💖🤍🤍🤍</div><small>Débutant</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="card contact" style="--c:var(--pink-d)">
+      <h2>Parlons ensemble ! 💌</h2>
+      <p>Un stage, un projet innovant ? Écris-moi, j'ai hâte de te lire ✨</p>
+      <div class="row">
+        <a class="x" href="tel:+21699053349">📞 99 053 349</a>
+        <span>✉️ molkawertani37.com</span>
+        <span>📍 Mégrine, Ben Arous</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>Fait avec 💖 par Molka Werteni · 2026</footer>
+
+</body>
+</html>
