@@ -27,7 +27,6 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-family:var(--head);font-weight:600}
 .wrap{max-width:1100px;margin:0 auto;padding:0 28px}
 
-/* floating decor */
 .fl{position:fixed;z-index:0;pointer-events:none;opacity:.7;animation:float 6s ease-in-out infinite}
 @keyframes float{50%{transform:translateY(-14px) rotate(8deg)}}
 .f1{top:14%;left:3%;font-size:34px}.f2{top:30%;right:3%;font-size:28px;animation-delay:1s}
@@ -35,13 +34,11 @@ h1,h2,h3,h4{font-family:var(--head);font-weight:600}
 .f5{top:46%;left:5%;font-size:22px;animation-delay:3s}
 main,nav,footer{position:relative;z-index:1}
 
-/* nav */
 nav{position:sticky;top:16px;z-index:20;display:flex;justify-content:center;margin-top:16px}
 nav ul{list-style:none;display:flex;gap:6px;background:var(--white);border:3px solid var(--ink);border-radius:999px;padding:7px 10px;box-shadow:4px 4px 0 var(--pink)}
 nav a{display:block;padding:6px 18px;border-radius:999px;font-family:var(--head);font-weight:500;font-size:15px;transition:.2s}
 nav a:hover{background:var(--pink-l);transform:translateY(-2px)}
 
-/* hero */
 .hero{padding:70px 0 50px}
 .hero .wrap{display:grid;grid-template-columns:330px 1fr;gap:56px;align-items:center}
 .photo{position:relative;width:310px;height:310px;margin:auto}
@@ -67,20 +64,17 @@ h1 span{color:var(--pink-d);display:inline-block;background:linear-gradient(tran
 .btn.s{background:var(--white);box-shadow:5px 5px 0 var(--lav)}
 .btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
 
-/* sections */
 section{padding:46px 0}
 .title{display:flex;justify-content:center;margin-bottom:34px}
 .title h2{display:inline-flex;gap:12px;align-items:center;font-size:32px;background:var(--white);border:3px solid var(--ink);border-radius:999px;padding:6px 32px;box-shadow:5px 5px 0 var(--c,var(--pink));transform:rotate(-1.5deg)}
 .card{background:var(--white);border:3px solid var(--ink);border-radius:26px;padding:28px 32px;box-shadow:7px 7px 0 var(--c,var(--pink))}
 
-/* about */
 .about{display:grid;grid-template-columns:1fr 290px;gap:28px;align-items:stretch}
 .about p{font-size:18px}
 .facts{list-style:none;display:grid;gap:12px;font-size:15px}
 .facts li{display:flex;gap:12px;align-items:center;background:var(--bg);border-radius:16px;padding:10px 14px;border:2px dashed var(--pink)}
 .facts em{font-style:normal;font-size:22px}
 
-/* skills */
 .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .sk{border:3px solid var(--ink);border-radius:24px;padding:20px 22px;background:var(--bgc);box-shadow:6px 6px 0 var(--c);transition:.2s}
 .sk:hover{transform:translateY(-6px) rotate(-1deg)}
@@ -88,7 +82,6 @@ section{padding:46px 0}
 .sk div{display:flex;flex-wrap:wrap;gap:8px}
 .sk span{background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:2px 14px;font-weight:700;font-size:14px}
 
-/* projects */
 .pr{display:grid;grid-template-columns:1fr 1fr;gap:34px;padding:0 10px}
 .note{position:relative;border:3px solid var(--ink);border-radius:24px;padding:34px 28px 26px;background:var(--bgc);box-shadow:7px 7px 0 var(--c);transition:.25s}
 .note:nth-child(1){transform:rotate(-1.8deg)}.note:nth-child(2){transform:rotate(1.8deg)}
@@ -99,7 +92,6 @@ section{padding:46px 0}
 .note p{margin-bottom:16px}
 .note .tg span{display:inline-block;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:0 12px;font-size:13px;font-weight:700;margin:0 6px 6px 0}
 
-/* experience path */
 .path{position:relative;display:grid;gap:30px;padding-left:64px}
 .path::before{content:"";position:absolute;left:23px;top:16px;bottom:16px;border-left:4px dotted var(--pink-d)}
 .job{position:relative}
@@ -111,7 +103,6 @@ section{padding:46px 0}
 .job p{margin:12px 0 14px;color:#6a5672}
 .job .tg span{display:inline-block;border:2px solid var(--ink);background:var(--bgc);border-radius:999px;padding:0 13px;font-size:13px;font-weight:700;margin:0 6px 6px 0}
 
-/* edu / certs / langs */
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .cols h3{font-size:22px;margin-bottom:16px}
 .ed{padding:12px 0;border-bottom:2px dashed var(--pink)}
@@ -129,7 +120,6 @@ section{padding:46px 0}
 .lg .h{font-size:20px;letter-spacing:3px;margin:6px 0;filter:saturate(1.1)}
 .lg small{color:var(--soft);font-weight:700}
 
-/* contact */
 .contact{text-align:center;background:linear-gradient(135deg,var(--pink-l),var(--lav-l))}
 .contact h2{font-size:38px;margin-bottom:6px}
 .contact p{color:var(--soft);margin-bottom:24px;font-size:18px}
@@ -167,7 +157,8 @@ footer{text-align:center;padding:30px 0 50px;font-family:var(--head);color:var(-
     <div class="photo">
       <div class="blob">
         <b>MW</b>
-        <!-- Pour ajouter ta photo : <img src="photo.jpg" alt="Molka Werteni"> ici -->
+        
+        <img src="photo.jpg.jpeg" alt="Ma photo" class="photo">
       </div>
       <span class="st s1">✨</span><span class="st s2">💖</span><span class="st s3">🌸</span>
     </div>
